@@ -1,0 +1,85 @@
+/* Đặt font chung cho toàn bộ website */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+/* Lớp cho toàn bộ app, để tạo khung flex */
+.app {
+  display: flex;
+  min-height: 100vh;
+}
+
+/* Sidebar */
+.sidebar {
+  width: 250px;
+  background-color: #f4f4f4;
+  padding: 20px;
+  height: 100vh;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+  position: fixed; /* Sidebar cố định */
+  top: 0;
+  left: 0;
+  transition: width 0.3s ease; /* Tạo hiệu ứng khi thay đổi kích thước */
+}
+
+/* Tiêu đề trong sidebar */
+.sidebar h2 {
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+
+/* Danh sách menu trong sidebar */
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+}
+
+/* Mỗi item trong menu */
+.sidebar ul li {
+  margin-bottom: 15px;
+}
+
+/* Liên kết trong menu */
+.sidebar ul li a {
+  text-decoration: none;
+  color: #333;
+  font-size: 16px;
+  transition: color 0.3s ease;
+}
+
+/* Hiệu ứng hover cho các liên kết */
+.sidebar ul li a:hover {
+  text-decoration: underline;
+  color: #007BFF; /* Thay đổi màu khi hover */
+}
+
+/* Nội dung chính */
+.content {
+  flex: 1;
+  margin-left: 250px; /* Đẩy nội dung sang phải để có không gian cho sidebar */
+  padding: 20px;
+}
+
+/* Responsive design - Điều chỉnh sidebar khi màn hình nhỏ */
+@media (max-width: 768px) {
+  .sidebar {
+    width: 200px; /* Giảm chiều rộng sidebar trên màn hình nhỏ */
+  }
+
+  .content {
+    margin-left: 200px; /* Điều chỉnh lại margin của content */
+  }
+}
+
+@media (max-width: 480px) {
+  .sidebar {
+    width: 0; /* Ẩn sidebar trên màn hình nhỏ hơn */
+    padding: 0;
+  }
+
+  .content {
+    margin-left: 0; /* Nội dung chiếm toàn bộ màn hình */
+  }
+}

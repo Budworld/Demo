@@ -1,0 +1,27 @@
+/* src/pages/Homepage.css */
+.homepage-content {
+  margin-top: 20px;
+}
+
+.homepage-title {
+  color: #1976d2;
+  font-weight: bold;
+}
+
+.homepage-text {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 20px;
+  color: #333;
+}
+.homepage-image {
+  text-align: center;
+  margin: 20px 0;
+}
+
+.homepage-image img {
+  width: 100%;
+  max-width: 800px;
+  height:auto;
+  border-radius: 8px;
+}
